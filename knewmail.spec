@@ -9,8 +9,8 @@ Group:		X11/Applications/Networking
 Group(de):	X11/Applikationen/Netzwerkwesen
 Group(pl):	X11/Aplikacje/Sieciowe
 Vendor:		Mike Pilone <mpilone@slac.com>
-Source0:	ftp://ftp.kde.org/pub/kde/unstable/apps/utils/%{name}-%{version}.src.tar.gz
-URL:		http://www.slac.com/mpilone/knewmail_home/
+Source0:	http://www.slac.com/mpilone/projects/knewmail/%{name}-%{version}.src.tar.gz
+URL:		http://www.slac.com/mpilone/projects/knewmail.phtml
 BuildRequires:	qt-devel >= 1.40
 BuildRequires:	kdelibs-devel >= 1.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -35,8 +35,10 @@ Knewmail jest programem powiadamiaj±cym o nowej poczcie dla KDE.
 if [ -z "$KDEDIR" ]; then
 	KDEDIR=%{_prefix} ; export KDEDIR
 fi
-CFLAGS="%{rpmcflags}" CXXFLAGS="%{rpmcflags}" ./configure \
-	--prefix=$KDEDIR --with-install-root=$RPM_BUILD_ROOT
+CFLAGS="%{rpmcflags}" CXXFLAGS="%{rpmcflags}" 
+%configure2_13 \
+	--prefix=$KDEDIR \
+	--with-install-root=$RPM_BUILD_ROOT
 %{__make}
 
 %install

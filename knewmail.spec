@@ -14,7 +14,6 @@ BuildRequires:	kdelibs-devel >= 2.0
 BuildRequires:	kdepim-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-
 %description
 Knewmail is a POP3 aware mail notifier for the K Desktop Environment.
 
@@ -51,7 +50,7 @@ find . -type f | sed 's,^\.,\%attr(-\,root\,root) ,' >> $RPM_BUILD_DIR/file.list
 find . -type l | sed 's,^\.,\%attr(-\,root\,root) ,' >> $RPM_BUILD_DIR/file.list.%{name}
 
 %clean
-rm -r $RPM_BUILD_ROOT
+rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)

@@ -10,7 +10,7 @@ Source:		%{name}-%{version}.src.tar.gz
 URL:		http://www.slac.com/mpilone/knewmail_home/
 BuildRequires:	qt-devel >= 1.40
 BuildRequires:	kdelibs-devel >= 1.0
-Buildroot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Knewmail is a POP3 aware mail notifier for the K Desktop

@@ -13,8 +13,6 @@ BuildRequires:	kdelibs-devel >= 2.0
 BuildRequires:	kdepim-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
 
 %description
 Knewmail is a POP3 aware mail notifier for the K Desktop Environment.

@@ -6,7 +6,7 @@ Release:	1
 Copyright:	GPL
 Group:		X11/KDE/Applications/Networking
 Vendor:		Mike Pilone <mpilone@slac.com>
-Source:		%{name}-%{version}.src.tar.gz
+Source0:	ftp://ftp.kde.org/pub/kde/unstable/apps/utils/%{name}-%{version}.src.tar.gz
 URL:		http://www.slac.com/mpilone/knewmail_home/
 BuildRequires:	qt-devel >= 1.40
 BuildRequires:	kdelibs-devel >= 1.0

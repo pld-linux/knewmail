@@ -36,7 +36,7 @@ rm -rf $RPM_BUILD_ROOT
 if [ -z "$KDEDIR" ]; then
         export KDEDIR=%{prefix}
 fi
-make prefix=$RPM_BUILD_ROOT$KDEDIR install-strip
+%{__make} prefix=$RPM_BUILD_ROOT$KDEDIR install-strip
 
 cd $RPM_BUILD_ROOT
 find . -type d | sed '1,2d;s,^\.,\%attr(-\,root\,root) \%dir ,' > $RPM_BUILD_DIR/file.list.%{name}

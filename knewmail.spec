@@ -21,7 +21,7 @@ Knewmail est un notificateur de mail avec support POP3
 pour l'Environment de Bureau K.
 
 %prep
-%setup
+%setup -q
 
 %build
 if [ -z "$KDEDIR" ]; then

@@ -8,6 +8,7 @@ License:	GPL
 Vendor:		Mike Pilone <mpilone@slac.com>
 Group:		X11/Applications/Networking
 Source0:	http://www.slac.com/mpilone/projects/knewmail/%{name}-%{version}.tar.gz
+# Source0-md5:	a43933779781c5a6341085e18988a182
 URL:		http://www.slac.com/mpilone/projects/knewmail.phtml
 BuildRequires:	kdelibs-devel >= 2.0
 BuildRequires:	kdepim-devel

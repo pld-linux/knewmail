@@ -8,8 +8,8 @@ Group:		X11/KDE/Applications/Networking
 Vendor:		Mike Pilone <mpilone@slac.com>
 Source:		%{name}-%{version}.src.tar.gz
 URL:		http://www.slac.com/mpilone/knewmail_home/
-BuildPrereq:	qt-devel >= 1.40
-BuildPrereq:	kdelibs-devel >= 1.0
+BuildRequires:	qt-devel >= 1.40
+BuildRequires:	kdelibs-devel >= 1.0
 Buildroot:	/tmp/%{name}-%{version}-root
 
 %description

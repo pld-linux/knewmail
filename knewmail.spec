@@ -25,18 +25,18 @@ pour l'Environment de Bureau K.
 
 %build
 if [ -z "$KDEDIR" ]; then
-        export KDEDIR=%{prefix}
+	KDEDIR=%{prefix} ; export KDEDIR
 fi
-CFLAGS="$RPM_OPT_FLAGS" CXXFLAGS="$RPM_OPT_FLAGS" ./configure \
+CFLAGS="%{rpmcflags}" CXXFLAGS="%{rpmcflags}" ./configure \
 	--prefix=$KDEDIR --with-install-root=$RPM_BUILD_ROOT
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 if [ -z "$KDEDIR" ]; then
-        export KDEDIR=%{prefix}
+	KDEDIR=%{prefix} ; export KDEDIR
 fi
-%{__make} prefix=$RPM_BUILD_ROOT$KDEDIR install-strip
+%{__make} prefix=$RPM_BUILD_ROOT$KDEDIR install
 
 cd $RPM_BUILD_ROOT
 find . -type d | sed '1,2d;s,^\.,\%attr(-\,root\,root) \%dir ,' > $RPM_BUILD_DIR/file.list.%{name}
@@ -47,3 +47,4 @@ find . -type l | sed 's,^\.,\%attr(-\,root\,root) ,' >> $RPM_BUILD_DIR/file.list
 rm -r $RPM_BUILD_ROOT
 
 %files -f ../file.list.%{name}
+%defattr(644,root,root,755)

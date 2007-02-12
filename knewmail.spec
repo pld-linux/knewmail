@@ -1,6 +1,6 @@
 Summary:	K Desktop Environment mail notifier
-Summary(fr):	Notificateur de mail pour l'Environment de Bureau K
-Summary(pl):	Powiadamianie o nowej poczcie dla KDE
+Summary(fr.UTF-8):   Notificateur de mail pour l'Environment de Bureau K
+Summary(pl.UTF-8):   Powiadamianie o nowej poczcie dla KDE
 Name:		knewmail
 Version:	4.0alpha3
 Release:	1
@@ -17,12 +17,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Knewmail is a POP3 aware mail notifier for the K Desktop Environment.
 
-%description -l fr
+%description -l fr.UTF-8
 Knewmail est un notificateur de mail avec support POP3 pour
 l'Environment de Bureau K.
 
-%description -l pl
-Knewmail jest programem powiadamiaj±cym o nowej poczcie dla KDE.
+%description -l pl.UTF-8
+Knewmail jest programem powiadamiajÄ…cym o nowej poczcie dla KDE.
 
 %prep
 %setup -q

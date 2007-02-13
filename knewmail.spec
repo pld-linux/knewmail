@@ -1,6 +1,6 @@
 Summary:	K Desktop Environment mail notifier
-Summary(fr.UTF-8):   Notificateur de mail pour l'Environment de Bureau K
-Summary(pl.UTF-8):   Powiadamianie o nowej poczcie dla KDE
+Summary(fr.UTF-8):	Notificateur de mail pour l'Environment de Bureau K
+Summary(pl.UTF-8):	Powiadamianie o nowej poczcie dla KDE
 Name:		knewmail
 Version:	4.0alpha3
 Release:	1
